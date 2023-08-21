@@ -14,7 +14,9 @@ app.use(cors());
 app.use("/users", userRoute);
 app.use("/", doctorRoute);
 
-
+app.get("/", (req,res)=>{
+   res.send("Welcome to homepage")
+})
 
 
 app.listen(process.env.PORT , async() => {
